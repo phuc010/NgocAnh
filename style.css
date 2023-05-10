@@ -1,0 +1,278 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Fugaz+One&family=Nunito&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Lato&family=Nunito&display=swap');
+
+
+/* RESET */
+*,
+*::after,
+*::before {
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+/* VARIABLES */
+:root {
+    /* Font */
+    --FF: "Nunito", sans-serif;
+    /* --FF-HEADING: "Fugaz One", cursive; */
+    --FS: clamp(1rem, 2.2vh, 1.5rem);
+    /* Color */
+    --BGCOLOR-FADE: rgb(214, 238, 237);
+    --BGCOLOR: rgb(167, 212, 181);
+    --BGIMAGE: linear-gradient(to bottom, var(--BGCOLOR), var(--BGCOLOR-FADE));
+    --BODY-BGCOLOR: PINK;
+    --BODER-COLOR: GRAY;
+    --BUTTON-COLOR: PINK;
+    --FONT-COLOR: BLACK;
+    --HEADER-BGCOLOR: BLACK;
+    --HEADER-COLOR: WHITE;
+    --HIGHTLIGHT-COLOR: rgb(242, 222, 226);
+    --LINK-ACTIVE: rgb(15, 244, 160);
+    --LINK-COLOR: BLACK;
+    --LINK-HOVER: BLACK;
+    --NAV-BGCOLOR: WHITE;
+}
+
+/* GENNERAL STYLES */
+html {
+    width: 980px;
+    height: auto;
+    scroll-behavior: smooth;
+    font-size: var(--FS);
+    font-family: var(--FF);
+    background-color: var(--BGCOLOR);
+    background-image: var(--BGIMAGE);
+    font-weight: 700;
+}
+
+.up-arrow {
+    position: sticky;
+    bottom: 0;
+    float: right;
+}
+
+h1,
+h2 {
+    font-family: var(--FF);
+    letter-spacing: 0.1em;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover,
+a:focus-visible {
+    color: var(--LINK-HOVER);
+}
+
+a:active {
+    color: var(--LINK-ACTIVE);
+}
+
+/* Menu-Submenu */
+.header {
+    display: flex;
+    align-items: center;
+}
+
+ul.root>li {
+    list-style: none;
+    float: left;
+    position: relative;
+}
+
+ul.root>li>a {
+    color: var(--FONT-COLOR);
+    padding: 0 12px;
+    line-height: 40px;
+    display: block;
+}
+
+ul.root>li>a:hover {
+    background-color: var(--BGCOLOR-FADE);
+    transform: ease-in 0.35s;
+}
+
+ul.submenu {
+    width: 150px;
+    background: #3d93be;
+    min-height: 80px;
+    display: none;
+    position: absolute;
+    z-index: 1;
+}
+
+ul.submenu li {
+    list-style: none;
+}
+
+ul.submenu li a {
+    text-transform: none;
+    color: var(--FONT-COLOR);
+    /* border: 1px solid #ccc; */
+    line-height: 40px;
+    text-indent: 10px;
+
+}
+
+ul.root>li:hover ul.submenu {
+    display: block;
+    background-color: var(--BGCOLOR-FADE);
+    transform: ease-in 0.35s;
+}
+
+ul.submenu li:hover {
+    background-color: var(--BGCOLOR);
+    transform: ease-in 0.35s;
+}
+
+.south {
+    position: relative;
+}
+
+/* sub_submenu */
+
+ul.sub_submenu {
+    display: none;
+    position: absolute;
+    top: 0px;
+    left: 150px;
+    width: 150px;
+}
+
+ul.submenu>li:hover ul.sub_submenu {
+    display: block;
+    background-color: var(--BGCOLOR-FADE);
+    transform: ease-in 0.35s;
+}
+
+ul.sub_submenu li a:hover {
+    background-color: var(--BGCOLOR);
+    transform: ease-in 0.35s;
+}
+
+/* banner */
+.banner figcaption {
+    text-align: center;
+}
+
+/* Top Destinatiton */
+.button {
+    padding: 10px 10px;
+    margin-top: 10px;
+    background-color: var(--BGCOLOR-FADE);
+    text-align: center;
+}
+
+.title {
+    text-align: center;
+    margin: 30px 20px;
+}
+
+.wrapper {
+    display: grid;
+    gap: 30px 50px;
+    grid-template: 400px/ auto auto;
+}
+
+.item2,
+.item3,
+.item4 {
+    display: flex;
+    margin-bottom: 50px;
+}
+
+/* Cusine */
+.wrapper_1 {
+    width: 100%;
+    max-width: 980px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    /* align-items: stretch; */
+    /* flex-wrap: wrap; */
+}
+
+.dish {
+    width: 25%;
+    height: auto;
+    /* background-color: white; */
+}
+
+.dish img {
+    width: 265px;
+    height: 177px;
+}
+
+/* Tip */
+.knowledge {
+    width: 100%;
+    height: auto;
+}
+
+.wrapper_2 {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 33.33%;
+}
+
+.tip {
+    display: flex;
+    padding: 20px;
+}
+
+/* Footer */
+.wrapper_4 {
+    display: flex;
+    float: right;
+}
+
+/* contact.html */
+.contact_img {
+    width: 100%;
+    height: 300px;
+}
+
+.contact_fieldset {
+    border: none;
+}
+
+.contact_p {
+    margin: 1em 0;
+}
+
+.contact_legend {
+    font-size: 2rem;
+}
+
+.contact_lable {
+    display: block;
+    font-weight: bold;
+}
+
+.contact_input,
+.contact_area {
+    width: 100%;
+    border-radius: 5px;
+    padding: 0.5em;
+
+}
+
+.contact_button {
+    padding: 0.5em 1em;
+    background-color: var(--BGCOLOR);
+    border-radius: 5px;
+}
+
+/* DESTINATION.HTML + nội dung chi tiết của 1 mục trong trang */
+/* CUSINE.HTML + nội dung chi tiết của 1 mục trong trang*/
+/* KNOWLEDGE.HTML */
